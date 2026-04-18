@@ -8,7 +8,7 @@ Applies to all projects. Project-level CLAUDE.md overrides anything here.
 
 Follow this process for all new projects:
 
-@~/.claude/docs/claude-code-workflow.md
+@~/docs/claude-code-workflow.md
 
 ---
 
@@ -32,8 +32,12 @@ Follow this process for all new projects:
 
 - Commit frequently with clear, descriptive messages
 - Format: `type: short description` (e.g. `feat: add login form`, `fix: handle null user`)
-- MUST NOT commit directly to main unless the project has no branching strategy
 - Each commit should represent one logical change
+- MUST NOT commit directly to main — all work happens on a feature branch
+- Branch naming: `feat/<name>`, `fix/<name>`, `chore/<name>` branched off `main`
+- MUST update `CHANGELOG.md` before every commit — log what changed and why
+  - Use format: `## [Unreleased]` section with `### Added / Changed / Fixed` bullets
+  - One entry per logical change, not per file touched
 
 ## Verification
 
@@ -55,5 +59,7 @@ Follow this process for all new projects:
 When starting a new project from scratch, MUST complete in order:
 1. Write `SPEC.md` before any code
 2. Scaffold project and initialize git
-3. Create project-level `CLAUDE.md`
-4. Confirm clean build/run before first feature
+3. Define and document the branching strategy
+4. Create `CHANGELOG.md` with an initial `## [Unreleased]` section
+5. Create project-level `CLAUDE.md`
+6. Confirm clean build/run before first feature
