@@ -51,6 +51,7 @@ Follow this process for all new projects:
 - If you hit a blocker or something unexpected, say so immediately
 - Keep responses focused — don't pad with unnecessary explanation
 - If I ask for a plan, give the plan — don't also write the code unless asked
+- Always use `yyyy-mm-dd` format for dates
 
 ---
 
