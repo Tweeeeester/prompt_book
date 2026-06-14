@@ -14,16 +14,19 @@ Follow this process for all new projects:
 
 ## How I Work
 
-- Before starting any task, confirm you understand the goal — ask if unclear
-- For non-trivial tasks, outline your approach before writing any code
-- MUST NOT make large sweeping changes without checking first
+- Before implementing, state your assumptions explicitly — if uncertain, ask
+- If multiple interpretations exist, present them — don't pick silently
+- For non-trivial tasks, define verifiable success criteria before writing code
 - Work in small, focused steps — one thing at a time
 - After implementing, verify your changes work before declaring done
 
 ## Code Style (Universal)
 
 - Write clean, readable code over clever code
-- MUST leave the codebase cleaner than you found it
+- Write the minimum code that solves the problem — no speculative features or premature abstractions
+- Touch only what you must — don't refactor or reformat adjacent code unless asked
+- Remove imports/variables/functions YOUR changes made unused; don't remove pre-existing dead code
+- Match existing code style, even if you'd do it differently
 - MUST NOT leave debug code, console.logs, or commented-out code behind
 - Use consistent naming conventions — follow whatever the project already uses
 - MUST NOT commit secrets, API keys, or credentials under any circumstances
@@ -41,13 +44,14 @@ Follow this process for all new projects:
 
 ## Verification
 
+- For multi-step tasks, state a brief plan with a verification step at each stage
 - Run tests after any non-trivial change — don't assume it works
 - If no tests exist, say so rather than skipping verification silently
 - Call out breaking changes explicitly before implementing them
 
 ## Communication
 
-- If something is ambiguous, ask before assuming
+- Ask one question at a time — never bundle multiple decision-making questions
 - If you hit a blocker or something unexpected, say so immediately
 - Keep responses focused — don't pad with unnecessary explanation
 - If I ask for a plan, give the plan — don't also write the code unless asked
